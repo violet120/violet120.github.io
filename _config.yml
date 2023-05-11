@@ -4,12 +4,12 @@
 
 # Site
 title: Jamie's Blog
-subtitle: ''
-description: ''
-keywords:
+subtitle: 網站建置中
+description: 紀錄學習過程以及摸索如何使用Hexo。
+keywords: #Front-End
 author: Jamie Chen
 language: zh-TW
-timezone: 'Taipei'
+timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -18,8 +18,8 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -49,6 +49,8 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -68,8 +70,8 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: #筆記
+tag_map: #Hexo #Next
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -98,11 +100,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/violet120/violet120.github.io
+  repo: https://github.com/violet120/violet120.github.io.git
+  # example, https://github.com/hexojs/hexojs.github.io
   branch: main
