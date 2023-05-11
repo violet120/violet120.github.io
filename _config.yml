@@ -108,4 +108,4 @@ deploy:
   type: git
   repo: https://github.com/violet120/violet120.github.io.git
   # example, https://github.com/hexojs/hexojs.github.io
-  branch: main
+  branch: gh-pages
