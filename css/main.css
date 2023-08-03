@@ -2508,3 +2508,9 @@ header.header {
     margin-bottom: 10px;
   }
 }
+body {
+  background: #dae7f3;
+}
+.post-button > a {
+  border-radius: 20px;
+}
