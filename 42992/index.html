@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"violet120.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前言在建構部落格中，Hexo X Next 主題的相關文章很多，只是設置完突然要更新，有些操作方式會忘記，寫一篇記錄方便未來翻閱。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【學習筆記】hexo 設定">
+<meta property="og:url" content="https://violet120.github.io/42992/">
+<meta property="og:site_name" content="前端之旅">
+<meta property="og:description" content="前言在建構部落格中，Hexo X Next 主題的相關文章很多，只是設置完突然要更新，有些操作方式會忘記，寫一篇記錄方便未來翻閱。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-08-10T04:28:07.000Z">
+<meta property="article:author" content="Jamie Chen">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Next">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://violet120.github.io/42992/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://violet120.github.io/42992/","path":"/42992/","title":"【學習筆記】hexo 設定"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【學習筆記】hexo 設定 | 前端之旅</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">前端之旅</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">學習記錄</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">基本設置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Site"><span class="nav-number">2.1.</span> <span class="nav-text">Site</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9B-Hexo-%E4%B8%BB%E9%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">更換 Hexo 主題</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E8%A8%82%E6%A8%A3%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">自訂樣式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E9%81%B8%E5%96%AE"><span class="nav-number">3.2.</span> <span class="nav-text">新增選單</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E5%BD%B1%E7%89%87"><span class="nav-number">4.</span> <span class="nav-text">新增影片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B5%A6%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0%E6%9C%89%E5%80%8B%E7%8D%A8%E7%AB%8B-ID"><span class="nav-number">5.</span> <span class="nav-text">給所有文章有個獨立 ID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="nav-number">6.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jamie Chen</p>
+  <div class="site-description" itemprop="description">今天又是擁抱可愛黑貓寫code的日子</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/violet120" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;violet120" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://violet120.github.io/42992/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jamie Chen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端之旅">
+      <meta itemprop="description" content="今天又是擁抱可愛黑貓寫code的日子">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【學習筆記】hexo 設定 | 前端之旅">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【學習筆記】hexo 設定
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-08-10 12:28:07 / 修改時間：18:21:52" itemprop="dateCreated datePublished" datetime="2023-08-10T12:28:07+08:00">2023-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在建構部落格中，Hexo X Next 主題的相關文章很多，只是設置完突然要更新，有些操作方式會忘記，寫一篇記錄方便未來翻閱。</p>
+<span id="more"></span>
+
+<h1 id="基本設置"><a href="#基本設置" class="headerlink" title="基本設置"></a>基本設置</h1><h2 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h2><p>在根目錄下的 _config.yml，# Site 區塊是設定 blog 的基本信息。</p>
+<p><strong>language 語言</strong><br>預設是 <strong>en</strong>，台灣是 <strong>zh-TW</strong>。</p>
+<p><strong>timezone 時區</strong><br>預設是自己電腦時間，基本上可以不用設定。<br>如果有需要修改，可參考 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"><strong>時區列表</strong></a> 選擇自己所在的時區，台灣是 <strong>Asia&#x2F;Taipei</strong>。</p>
+<hr>
+<h1 id="更換-Hexo-主題"><a href="#更換-Hexo-主題" class="headerlink" title="更換 Hexo 主題"></a>更換 Hexo 主題</h1><p>可以到 Hexo 官網提供的 <a target="_blank" rel="noopener" href="https://hexo.io/themes/"><strong>themes</strong></a>，選擇感興趣的主題，我使用的是 <a target="_blank" rel="noopener" href="https://theme-next.js.org/"><strong>Next</strong></a> 主題。<br>將主題下載下來後，放置在 themes 資料夾，到根目錄下的 _config.yml 更換要用的主題。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: &lt;主題資料夾名稱&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自訂樣式"><a href="#自訂樣式" class="headerlink" title="自訂樣式"></a>自訂樣式</h2><p>需要先到 themes&#x2F;hexo-theme-next&#x2F;_config.yml 的 custom_file_path ，將 style 的註解拿掉。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>按照 style 的路徑，新建資料夾跟檔案，在 styles.styl 撰寫 css 自行改變背景、按鈕樣式等。</p>
+<h2 id="新增選單"><a href="#新增選單" class="headerlink" title="新增選單"></a>新增選單</h2><p>Next 主題有多個選單可以使用，但需要先自行建立 page。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>   <span class="comment"># 首頁</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user  # 關於我</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span>  <span class="comment"># 標籤</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span>  <span class="comment"># 分類</span></span><br><span class="line">  <span class="comment">#archives: /archives/ || fa fa-archive # 歸檔</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<p>在終端機上輸入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &lt;tags&gt;  ← 建立標籤頁</span><br><span class="line"></span><br><span class="line">hexo new page &lt;categories&gt;  ← 建立分類頁</span><br></pre></td></tr></table></figure>
+
+<p>建立成功後，會在 &#x2F;source 底下出現 tags 跟 categories 資料夾，各自會有一個 index.md 檔案，分別寫入 <strong>type</strong></p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">layout: page</span><br><span class="line">&lt;!-- 預設是英文，可自行改名 --&gt;</span><br><span class="line">title: 分類</span><br><span class="line">date: 2023-08-10 17:17:24</span><br><span class="line">&lt;!-- 新增 type，就會只顯示 categories --&gt;</span><br><span class="line">type: categories</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+<p>tags 跟 categories 相同，新增 <code>type: tags</code> 即可。</p>
+<p>文章內新增標籤跟分類的方式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">- 標籤名稱</span><br><span class="line"></span><br><span class="line">categories:</span><br><span class="line">- 分類名稱</span><br><span class="line">- 第二級分類名稱</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="新增影片"><a href="#新增影片" class="headerlink" title="新增影片"></a>新增影片</h1><p>這邊寫的是從 youtube 插入影片到文章的方法。<br>鏈接是點youtube 分享後，僅複製 <a target="_blank" rel="noopener" href="https://youtu.be/">https://youtu.be/</a> 後面的部分即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% 網站 鏈接 %&#125;</span><br><span class="line">&#123;% youtube 5qSswXCzW44 %&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="給所有文章有個獨立-ID"><a href="#給所有文章有個獨立-ID" class="headerlink" title="給所有文章有個獨立 ID"></a>給所有文章有個獨立 ID</h1><p>安裝後就不會因 hexo clean 而清除掉文章的ID<br><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-abbrlink">hexo-abbrlink</a></p>
+<hr>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">hexo 官方文件</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20139218/ironman/3910">30 天利用 Hexo 打造技術部落格</a><br><a target="_blank" rel="noopener" href="https://hackmd.io/@Heidi-Liu/hexo-theme#%E6%96%B0%E5%A2%9E%E5%85%A7%E5%AE%B9%E5%88%B0%E6%A0%B9%E7%9B%AE%E9%8C%84%E7%9A%84-_configyml">如何更換 Hexo 主題 &amp; 自訂樣式</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/Next/" rel="tag"># Next</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/51920/" rel="prev" title="【Vue3】v-bind 的運用">
+                  <i class="fa fa-chevron-left"></i> 【Vue3】v-bind 的運用
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a target="_blank" rel="noopener" href='https://github.com/violet120'>Jamie</a></span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
+</html>
