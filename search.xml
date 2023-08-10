@@ -1,79 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Live2D 建置</title>
-    <url>//1306/</url>
-    <content><![CDATA[<h2 id="前因"><a href="#前因" class="headerlink" title="前因"></a>前因</h2><p>想要擁有一個在 Blog 的搖頭晃腦的小寵物，摸索建置方式，並先記錄簡易安裝方式。</p>
-<span id="more"></span>
-
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
-<li><p>終端機上輸入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安裝自己要的模板，例如我要的是貓咪模組，在終端機上輸入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-hijiki</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在根目錄的 _config.yml 添加配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki  # 這串寫入要使用的live2D模組</span><br><span class="line">  display:</span><br><span class="line">    #  設置模組的位置</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true # 設定手機頁面時，是否要顯示 live2D 模組</span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重啟 Hexo 伺服器，畫面出現剛安裝的模組代表設置成功。</p>
-</li>
-</ol>
-<h2 id="資料來源"><a href="#資料來源" class="headerlink" title="資料來源"></a>資料來源</h2><p><a href="https://github.com/EYHN/hexo-helper-live2d">hexo-helper-live2d</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>live2D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【學習筆記】hexo 設定</title>
-    <url>//42992/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在建構部落格中，Hexo X Next 主題的相關文章很多，只是設置完突然要更新，有些操作方式會忘記，寫一篇記錄方便未來翻閱。</p>
-<span id="more"></span>
-
-<h1 id="基本設置"><a href="#基本設置" class="headerlink" title="基本設置"></a>基本設置</h1><h2 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h2><p>在根目錄下的 _config.yml，# Site 區塊是設定 blog 的基本信息。</p>
-<p><strong>language 語言</strong><br>預設是 <strong>en</strong>，台灣是 <strong>zh-TW</strong>。</p>
-<p><strong>timezone 時區</strong><br>預設是自己電腦時間，基本上可以不用設定。<br>如果有需要修改，可參考 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"><strong>時區列表</strong></a> 選擇自己所在的時區，台灣是 <strong>Asia&#x2F;Taipei</strong>。</p>
-<hr>
-<h1 id="更換-Hexo-主題"><a href="#更換-Hexo-主題" class="headerlink" title="更換 Hexo 主題"></a>更換 Hexo 主題</h1><p>可以到 Hexo 官網提供的 <a href="https://hexo.io/themes/"><strong>themes</strong></a>，選擇感興趣的主題，我使用的是 <a href="https://theme-next.js.org/"><strong>Next</strong></a> 主題。<br>將主題下載下來後，放置在 themes 資料夾，到根目錄下的 _config.yml 更換要用的主題。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: &lt;主題資料夾名稱&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="自訂樣式"><a href="#自訂樣式" class="headerlink" title="自訂樣式"></a>自訂樣式</h2><p>需要先到 themes&#x2F;hexo-theme-next&#x2F;_config.yml 的 custom_file_path ，將 style 的註解拿掉。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>按照 style 的路徑，新建資料夾跟檔案，在 styles.styl 撰寫 css 自行改變背景、按鈕樣式等。</p>
-<h2 id="新增選單"><a href="#新增選單" class="headerlink" title="新增選單"></a>新增選單</h2><p>Next 主題有多個選單可以使用，但需要先自行建立 page。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>   <span class="comment"># 首頁</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user  # 關於我</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span>  <span class="comment"># 標籤</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span>  <span class="comment"># 分類</span></span><br><span class="line">  <span class="comment">#archives: /archives/ || fa fa-archive # 歸檔</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
-
-<p>在終端機上輸入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;tags&gt;  ← 建立標籤頁</span><br><span class="line"></span><br><span class="line">hexo new page &lt;categories&gt;  ← 建立分類頁</span><br></pre></td></tr></table></figure>
-
-<p>建立成功後，會在 &#x2F;source 底下出現 tags 跟 categories 資料夾，各自會有一個 index.md 檔案，分別寫入 <strong>type</strong></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">layout: page</span><br><span class="line">&lt;!-- 預設是英文，可自行改名 --&gt;</span><br><span class="line">title: 分類</span><br><span class="line">date: 2023-08-10 17:17:24</span><br><span class="line">&lt;!-- 新增 type，就會只顯示 categories --&gt;</span><br><span class="line">type: categories</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
-<p>tags 跟 categories 相同，新增 <code>type: tags</code> 即可。</p>
-<p>文章內新增標籤跟分類的方式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">- 標籤名稱</span><br><span class="line"></span><br><span class="line">categories:</span><br><span class="line">- 分類名稱</span><br><span class="line">- 第二級分類名稱</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="新增影片"><a href="#新增影片" class="headerlink" title="新增影片"></a>新增影片</h1><p>這邊寫的是從 youtube 插入影片到文章的方法。<br>鏈接是點youtube 分享後，僅複製 <a href="https://youtu.be/">https://youtu.be/</a> 後面的部分即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% 網站 鏈接 %&#125;</span><br><span class="line">&#123;% youtube 5qSswXCzW44 %&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="給所有文章有個獨立-ID"><a href="#給所有文章有個獨立-ID" class="headerlink" title="給所有文章有個獨立 ID"></a>給所有文章有個獨立 ID</h1><p>安裝後就不會因 hexo clean 而清除掉文章的ID<br><a href="https://www.npmjs.com/package/hexo-abbrlink">hexo-abbrlink</a></p>
-<hr>
-<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p><a href="https://hexo.io/zh-tw/docs/">hexo 官方文件</a><br><a href="https://ithelp.ithome.com.tw/users/20139218/ironman/3910">30 天利用 Hexo 打造技術部落格</a><br><a href="https://hackmd.io/@Heidi-Liu/hexo-theme#%E6%96%B0%E5%A2%9E%E5%85%A7%E5%AE%B9%E5%88%B0%E6%A0%B9%E7%9B%AE%E9%8C%84%E7%9A%84-_configyml">如何更換 Hexo 主題 &amp; 自訂樣式</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Vue3】v-bind 的運用</title>
     <url>//51920/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>v-bind 是綁定&#x2F;控制 HTML 屬性的語法。</p>
@@ -119,6 +46,85 @@
       </categories>
       <tags>
         <tag>Vue3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Live2D 建置</title>
+    <url>//1306/</url>
+    <content><![CDATA[<h2 id="前因"><a href="#前因" class="headerlink" title="前因"></a>前因</h2><p>想要擁有一個在 Blog 的搖頭晃腦的小寵物，摸索建置方式，並先記錄簡易安裝方式。</p>
+<span id="more"></span>
+
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
+<li><p>終端機上輸入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安裝自己要的模板，例如我要的是貓咪模組，在終端機上輸入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-hijiki</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在根目錄的 _config.yml 添加配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki  # 這串寫入要使用的live2D模組</span><br><span class="line">  display:</span><br><span class="line">    #  設置模組的位置</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true # 設定手機頁面時，是否要顯示 live2D 模組</span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重啟 Hexo 伺服器，畫面出現剛安裝的模組代表設置成功。</p>
+</li>
+</ol>
+<h2 id="資料來源"><a href="#資料來源" class="headerlink" title="資料來源"></a>資料來源</h2><p><a href="https://github.com/EYHN/hexo-helper-live2d">hexo-helper-live2d</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>live2D</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【學習筆記】hexo 設定</title>
+    <url>//42992/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在建構部落格中，Hexo X Next 主題的相關文章很多，只是設置完突然要更新，有些操作方式會忘記，寫一篇記錄方便未來翻閱。</p>
+<span id="more"></span>
+
+<h1 id="基本設置"><a href="#基本設置" class="headerlink" title="基本設置"></a>基本設置</h1><h2 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h2><p>在根目錄下的 _config.yml，# Site 區塊是設定 blog 的基本信息。</p>
+<p><strong>language 語言</strong><br>預設是 <strong>en</strong>，台灣是 <strong>zh-TW</strong>。</p>
+<p><strong>timezone 時區</strong><br>預設是自己電腦時間，基本上可以不用設定。<br>如果有需要修改，可參考 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"><strong>時區列表</strong></a> 選擇自己所在的時區，台灣是 <strong>Asia&#x2F;Taipei</strong>。</p>
+<hr>
+<h1 id="更換-Hexo-主題"><a href="#更換-Hexo-主題" class="headerlink" title="更換 Hexo 主題"></a>更換 Hexo 主題</h1><p>可以到 Hexo 官網提供的 <a href="https://hexo.io/themes/"><strong>themes</strong></a>，選擇感興趣的主題，我使用的是 <a href="https://theme-next.js.org/"><strong>Next</strong></a> 主題。<br>將主題下載下來後，放置在 themes 資料夾，到根目錄下的 _config.yml 更換要用的主題。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: &lt;主題資料夾名稱&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自訂樣式"><a href="#自訂樣式" class="headerlink" title="自訂樣式"></a>自訂樣式</h2><p>需要先到 themes&#x2F;hexo-theme-next&#x2F;_config.yml 的 custom_file_path ，將 style 的註解拿掉。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>按照 style 的路徑，新建資料夾跟檔案，在 styles.styl 撰寫 css 自行改變背景、按鈕樣式等。</p>
+<h3 id="✨-自訂-Code-樣式"><a href="#✨-自訂-Code-樣式" class="headerlink" title="✨ 自訂 Code 樣式"></a>✨ 自訂 Code 樣式</h3><p>可以到 <a href="https://theme-next.js.org/highlight/"><font color="#EA0000">available themes</font></a> 選擇想要的 Code 顯示顏色。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">atom-one-dark-reasonable</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">atom-one-dark-reasonable</span></span><br><span class="line">  <span class="attr">prism:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">prism</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">prism-dark</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 是否顯示複製 code 功能</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">    <span class="attr">style:</span> <span class="string">mac</span> <span class="comment"># Code 外框樣版</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自訂-Favicon"><a href="#自訂-Favicon" class="headerlink" title="自訂 Favicon"></a>自訂 Favicon</h3><p>默認圖示會是 Next 圖標，如果想要修改，可以到 themes&#x2F;hexo-theme-next&#x2F;source&#x2F;images 中替換掉 favicon，放置新的圖標後，再到 主題目錄下 _config.yml 中找到 favicon，將路徑修改為剛剛新增的圖標即可完成替換。</p>
+<p>使用 <a href="https://realfavicongenerator.net/"><font color="#EA0000">Favicon Generator</font></a> 自訂圖標。</p>
+<p>如果是想自製 Logo，可以使用 <a href="https://www.designevo.com/tw/">Designevo</a>，將做好的 logo url 貼到 <strong>custom_logo</strong>。</p>
+<h2 id="新增選單"><a href="#新增選單" class="headerlink" title="新增選單"></a>新增選單</h2><p>Next 主題有多個選單可以使用，但需要先自行建立 page。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>   <span class="comment"># 首頁</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user  # 關於我</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span>  <span class="comment"># 標籤</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span>  <span class="comment"># 分類</span></span><br><span class="line">  <span class="comment">#archives: /archives/ || fa fa-archive # 歸檔</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<p>在終端機上輸入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;tags&gt;  ← 建立標籤頁</span><br><span class="line"></span><br><span class="line">hexo new page &lt;categories&gt;  ← 建立分類頁</span><br></pre></td></tr></table></figure>
+
+<p>建立成功後，會在 &#x2F;source 底下出現 tags 跟 categories 資料夾，各自會有一個 index.md 檔案，分別寫入 <strong>type</strong></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">layout: page</span><br><span class="line">&lt;!-- 預設是英文，可自行改名 --&gt;</span><br><span class="line">title: 分類</span><br><span class="line">date: 2023-08-10 17:17:24</span><br><span class="line">&lt;!-- 新增 type，就會只顯示 categories --&gt;</span><br><span class="line">type: categories</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+<p>tags 跟 categories 相同，新增 <code>type: tags</code> 即可。</p>
+<p>文章內新增標籤跟分類的方式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">- 標籤名稱</span><br><span class="line"></span><br><span class="line">categories:</span><br><span class="line">- 分類名稱</span><br><span class="line">- 第二級分類名稱</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="新增影片"><a href="#新增影片" class="headerlink" title="新增影片"></a>新增影片</h1><p>這邊寫的是從 youtube 插入影片到文章的方法。<br>鏈接是點youtube 分享後，僅複製 <a href="https://youtu.be/">https://youtu.be/</a> 後面的部分即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% 網站 鏈接 %&#125;</span><br><span class="line">&#123;% youtube 5qSswXCzW44 %&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="給所有文章有個獨立-ID"><a href="#給所有文章有個獨立-ID" class="headerlink" title="給所有文章有個獨立 ID"></a>給所有文章有個獨立 ID</h1><p>安裝後就不會因 hexo clean 而清除掉文章的ID<br><a href="https://www.npmjs.com/package/hexo-abbrlink">hexo-abbrlink</a></p>
+<hr>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p><a href="https://hexo.io/zh-tw/docs/">hexo 官方文件</a><br><a href="https://ithelp.ithome.com.tw/users/20139218/ironman/3910">30 天利用 Hexo 打造技術部落格</a><br><a href="https://hackmd.io/@Heidi-Liu/hexo-theme#%E6%96%B0%E5%A2%9E%E5%85%A7%E5%AE%B9%E5%88%B0%E6%A0%B9%E7%9B%AE%E9%8C%84%E7%9A%84-_configyml">如何更換 Hexo 主題 &amp; 自訂樣式</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
 </search>
